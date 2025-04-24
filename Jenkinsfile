@@ -1,14 +1,14 @@
 pipeline {
  agent any
  tools {
- nodejs 'NodeJS 16' // Sesuaikan dengan nama Node.js yang
-dikonfigurasi di Jenkins
+ nodejs 'ode js 16' // Sesuaikan dengan nama Node.js yang
+
  }
  stages {
  stage('Checkout') {
  steps {
  git branch: 'main', url:
-'https://github.com/username/node.git'
+'https://github.com/Rofiq02bae/nodejs.git'
  }
  }
  stage('Install Dependencies') {
@@ -22,8 +22,7 @@ dikonfigurasi di Jenkins
  }
  post {
  success {
- junit 'test-results.xml' // Sesuaikan dengan lokasi
-file hasil tes
+ junit 'test-results.xml' // Sesuaikan dengan lokasifile hasil tes
  }
  failure {
  echo 'Tests failed!'
@@ -32,8 +31,7 @@ file hasil tes
  }
  stage('Build') {
  steps {
- sh 'npm run build' // Sesuaikan dengan perintah build di
-proyek Anda
+ sh 'npm run build' // Sesuaikan dengan perintah build diproyek Anda
  }
  }
  stage('Deploy') {
