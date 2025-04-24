@@ -1,7 +1,7 @@
 pipeline {
  agent any
  tools {
- nodejs 'ode js 16' // Sesuaikan dengan nama Node.js yang
+ nodejs 'node js 16' // Sesuaikan dengan nama Node.js yang
 
  }
  stages {
